@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mt-4">
+    <div class="card container shadow mt-5 text-center col-md-4">
+        <h1 class="pt-2">Register</h1>
+        <hr>
+        <form action="" method="post" class="px-3">
+            {% csrf_token %}
+            <input type="text" class="form-control my-3" name="username" placeholder="Username" required/>
+            <input type="email" class="form-control my-3" name="email" placeholder="Email" required/>
+            <input type="password" class="form-control my-3" name="password1" placeholder="Password" required/>
+            <input type="password" class="form-control my-3" name="password2" placeholder="Confirm password" required/>
+            <div class="text-left">
+               <a class="text-left text-decoration-none" href="">forget password</a><br>
+            </div>
+            <button class="btn-lg btn-outline-primary my-3">Submit</button>
+        </form>
+    </div>
+    </div>
+{% endblock %}
